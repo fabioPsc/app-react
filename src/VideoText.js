@@ -1,10 +1,10 @@
 
 
-function VideoText(props) {
+function VideoText({title, views, published, user, color}) {
 
     // DESTRUCTURING 
     /* console.log(props); */
-    const {title, views, published, user, color} = props;
+    
     return (
         <div style={{ display: "flex" }}>
             <div style= {{ padding: '30px', background: color }} >
