@@ -6,14 +6,14 @@ import VideoText from './VideoText';
 
 function App() {
   
-  const saluta = (e) => {
-    console.log(e)
+  const saluta = (nome) => {
+    console.log(`Ciao ${nome} `)
   }
 
   return (
     <div className="App">
       {/* Aggiungere eventi */}
-      <button onClick={saluta}>Click me</button>
+      <button onClick={ () => saluta('Billy')}>Click me</button>
         <VideoText title="Four Season Vivaldi" views="230mld" published="10 years ago" user="Fabio Grandi" color="blue" />
         <VideoText title="The best of Vivaldi" views="33mld" published="7 years ago" user="Giuseppe Rossi" color="violet" />
         <VideoText title="Antonio Vivaldi la stravaganza" views="17mld" published="8 years ago" user="Mario Bianchi" color="green" />
@@ -26,3 +26,4 @@ function App() {
 export default App;
 
 
+  
