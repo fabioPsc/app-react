@@ -1,29 +1,27 @@
 /* import logo from './logo.svg'; */
 import './App.css';
-import VideoText from './VideoText';
-
-
+/* import VideoText from './VideoText'; */
+import {useState} from 'react';
 
 function App() {
   
-  const saluta = (nome) => {
-    console.log(`Ciao ${nome} `)
+  const [nome, setNome] = useState('Billy')
+  const cambiaNome = () => {
+    setNome('Johnny')
+    /* console.log(nome) */
   }
-
-  return (
-    <div className="App">
-      {/* Aggiungere eventi */}
-      <button onClick={ () => saluta('Billy')}>Click me</button>
-        <VideoText title="Four Season Vivaldi" views="230mld" published="10 years ago" user="Fabio Grandi" color="blue" />
-        <VideoText title="The best of Vivaldi" views="33mld" published="7 years ago" user="Giuseppe Rossi" color="violet" />
-        <VideoText title="Antonio Vivaldi la stravaganza" views="17mld" published="8 years ago" user="Mario Bianchi" color="green" />
-        <VideoText title="Antonio Vivaldi: le quattro stagioni" views="4mld" published="13 years ago" user="Antonio Pozzi" color="white" />
-        <VideoText title="Vivaldi - Complete Violin Concertos" views="1mld" published="3 years ago" user="Giorgia Meluzzi" color="red" />
-    </div>
+  
+return (
+  <div className="App">
+  
+    <button onClick= {cambiaNome} >Cambia Nome</button>
+      <h3>Ciao {nome} </h3>
+  </div>
   );
+  
 }
+
 
 export default App;
 
 
-  
