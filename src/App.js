@@ -6,17 +6,17 @@ import {useState} from 'react';
 
 function App() {
   
-  const [numero, setNumero] = useState(0)
-  const aumentaNumero = () => {
-    setNumero(numero + 7)
-    console.log(numero)
+  const [color, setColor] = useState('green')
+  const cambiaColore = () => {
+    setColor('gray')
+    console.log('black')
   }
   
 return (
   <div className="App">
   
-    <button onClick= {aumentaNumero} >Cambia Nome</button>
-      <h3>Ciao {numero} </h3>
+    <button onClick= {cambiaColore} >Cambia Nome</button>
+      <h3 style = {{ color: color }} >Ciao {} </h3>
   </div>
   );
   
