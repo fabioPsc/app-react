@@ -6,8 +6,8 @@ import VideoText from './VideoText';
 
 function App() {
   
-  const saluta = () => {
-    console.log('ciao mondo')
+  const saluta = (e) => {
+    console.log(e)
   }
 
   return (
