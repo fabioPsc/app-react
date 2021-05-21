@@ -5,24 +5,23 @@ import './App.css';
 import {useState} from 'react';
 
 function App() {
-  
-  const [color, setColor] = useState('green')
-  const cambiaColore = () => {
-    setColor('gray')
-    console.log('black')
+  const [text, setText] = useState("")
+  // evento Target
+  const onChangeHandler=(e)=>{
+    setText(e.target.value)
+    console.log(e.target.value)
   }
   
-return (
-  <div className="App">
+  return (
+    <div className="App">
+      <input type="text" onChange={onChangeHandler} value={text} />
+      {text}
+      <button onClick={()=>setText("")} >Azzera Test</button>
+    </div>
+    );
+  }
   
-    <button onClick= {cambiaColore} >Cambia Nome</button>
-      <h3 style = {{ color: color }} >Ciao {} </h3>
-  </div>
-  );
+  export default App;
   
-}
-
-
-export default App;
-
-
+  
+  
