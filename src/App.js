@@ -11,8 +11,8 @@ function App() {
   // evento Target
   const onChangeHandler=(e)=>{
     setText(e.target.value)
-    /* console.log(e.target.value) */
-    console.log(e.target)
+    console.log(e.target.value)
+    /* console.log(e.target) */
   }
   // crea un array di elementi
   const addTextHandler=()=>{
